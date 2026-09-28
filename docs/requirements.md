@@ -17,7 +17,7 @@ decisions for the enclosure itself.
 ## Decided
 
 - **Concept B, frame**: a bezel around the board with a lip 0.6 mm above its top face; the board sits
-  recessed in it on four bosses (M2 into heat-set inserts). See [`concept-b-versions.png`](concept-b-versions.png)
+  recessed in it on four bosses (M2 into heat-set inserts). See [`img/concept-b-versions.png`](img/concept-b-versions.png)
 - **Keys**: Kailh Choc V1 low profile with flat MBK-style caps, after the Chudx Nano 100 (DS2000-PCB#19)
 - **Two versions of B, same tray**:
   - **flat**: the tray on rubber feet; the USB-C cable leaves straight back, level with the desk
