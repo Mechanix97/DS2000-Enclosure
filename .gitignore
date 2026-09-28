@@ -1,0 +1,10 @@
+# Fusion 360 / slicer leftovers
+*.f3d.bak
+*~
+*.tmp
+*.gcode
+*.bgcode
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
