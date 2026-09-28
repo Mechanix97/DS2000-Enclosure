@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/img/ds2000-logo.webp" alt="DS2000" width="150">
+</p>
+
 # DS-2000 Enclosure
 
 3D-printed tray for the [DS-2000](https://github.com/Mechanix97/DS-2000), a three-key Discord control
