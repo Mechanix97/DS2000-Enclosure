@@ -1,13 +1,14 @@
 # DS2000-PCB rev A — mechanical reference
 
 `DS2000-PCB-revA.step` is the populated rev A board, exported from
-[DS2000-PCB](https://github.com/Mechanix97/DS2000-PCB) at commit `b65971f` (PR #18, rev A merged) with:
+[DS2000-PCB](https://github.com/Mechanix97/DS2000-PCB) at commit `045842b` (DS2000-PCB#19, rev A with
+Kailh Choc V1 keys; re-export and update this line once it is merged) with:
 
 ```sh
 kicad-cli pcb export step --user-origin 100x94mm --subst-models -o DS2000-PCB-revA.step DS2000.kicad_pcb
 ```
 
-It includes every part, the three MX switches with a 1u keycap on each, and the USB-C receptacle
+It includes every part, the three Choc V1 switches with an MBK-style keycap on each, and the USB-C receptacle
 underneath. Re-export it whenever the board's outline, holes or parts change, and note the PCB
 commit here: the enclosure and the board share these numbers.
 
@@ -45,13 +46,14 @@ Drill 2.2 mm, copper ring 4.4 mm on both faces: keep screw heads and standoffs w
 
 | Key | Centre X | Centre Y |
 |---|---|---|
-| MUTE | −19.05 | −6.0 |
-| DEAFEN | 0 | −6.0 |
-| DISCONNECT | +19.05 | −6.0 |
+| MUTE | −18 | −7.0 |
+| DEAFEN | 0 | −7.0 |
+| DISCONNECT | +18 | −7.0 |
 
-- Cherry MX, PCB-mounted, no plate: the switch housing sits on the board's top face
-- keycap: 18 × 18 mm at the base, top at **Z ≈ 21.3** (DSA/XDA-like profile in the model; real
-  keycaps vary), 4 mm of travel
+- Kailh Choc V1 (low profile), soldered, no plate: the switch housing sits on the board's top face
+  (13.8 mm lower housing, 15 mm flange 2.2 mm up, housing top at Z ≈ 6.6)
+- keycap: MBK-style, 17.5 × 16.5 mm, 18 mm pitch, top at **Z ≈ 10.3** (1.6 board + ~8.7; real
+  caps vary by a few tenths), 3 mm of travel
 - the keys are fully exposed: nothing of the enclosure should rise above the board's top face
   within a keycap's footprint plus ~1 mm
 
@@ -60,8 +62,8 @@ Drill 2.2 mm, copper ring 4.4 mm on both faces: keep screw heads and standoffs w
 | Item | Where | Below the board (Z) |
 |---|---|---|
 | USB-C receptacle | X −4.47…+4.47, Y +16.9…+24.2 (face 1.2 mm past the back edge) | 0 … **−3.35** |
-| MX switch pins | under each key | 0 … −1.8 |
-| SK6812MINI-E ×2 | under MUTE and DEAFEN (X −19.05 and 0, Y −11.1) | flush |
+| Choc switch pins and posts | under each key | 0 … −3.0 (centre post Ø3.4, side posts Ø1.9) |
+| SK6812MINI-E ×2 | under MUTE and DEAFEN (X −18 and 0, Y −11.7) | flush |
 | Debug pads (SWD, BOOT, RST) | X +18…+23.1, Y +13…+17 | flat pads |
 | USB wire holes (J3) | X −25.5…−17.9, Y +21 | through-holes |
 

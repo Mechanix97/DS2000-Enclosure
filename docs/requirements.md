@@ -12,18 +12,28 @@ decisions for the enclosure itself.
   long as it stays below the board's top face
 - **Clearance underneath**: ≥ 4 mm pocket; USB-C cut-out in the back wall, ≥ 13 × 7 mm, centred on
   the receptacle
-- **Height**: keycap tops sit ~21.3 mm above the board's bottom face; the tray adds to that
+- **Height**: keycap tops sit ~10.3 mm above the board's bottom face (Choc V1 + MBK); the tray adds to that
+
+## Decided
+
+- **Concept B, frame**: a bezel around the board with a lip 0.6 mm above its top face; the board sits
+  recessed in it on four bosses (M2 into heat-set inserts). See [`concept-b-versions.png`](concept-b-versions.png)
+- **Keys**: Kailh Choc V1 low profile with flat MBK-style caps, after the Chudx Nano 100 (DS2000-PCB#19)
+- **Two versions of B, same tray**:
+  - **flat**: the tray on rubber feet; the USB-C cable leaves straight back, level with the desk
+  - **tilted**: the tray on a separate wedge, 7°, 3.0 mm at the front and 9.4 mm at the back, held by
+    four 6 × 1.5 mm disc magnets under the corner bosses, with pockets matched in the wedge. The USB-C
+    stays at the back and the cable leaves at 7°; a cable soldered to J3 is the alternative
 
 ## To decide
 
 - [ ] Printer and process (FDM / resin), material (PLA, PETG, ASA…)
-- [ ] Tray height under the board, and whether the device sits flat or tilts towards the user
-- [ ] Edge style: flush with the board, a visible lip/bezel around it, or a layered look
-- [ ] Screws: M2 into heat-set inserts (recommended for repeat assembly) or self-tapping into plastic
+- [ ] Tray height under the board (6.5 mm in the concept: 4.5 mm pocket + 2 mm floor)
+- [ ] Screws: M2 into heat-set inserts (as in the concept) or self-tapping into plastic
 - [ ] Weight and grip: rubber feet, a steel or lead weight in the pocket (keys get pressed hard during
       calls)
 - [ ] Access to the debug pads: take the board out, or a window in the floor
-- [ ] Keycaps: profile and whether mute/deafen are translucent (their LEDs shine through the switch)
+- [ ] Keycaps: MBK colour, and whether mute/deafen are translucent (their LEDs shine through the switch)
 - [ ] Colour and finish of the tray, to go with the black-and-gold board
 
 ## Deliverables
