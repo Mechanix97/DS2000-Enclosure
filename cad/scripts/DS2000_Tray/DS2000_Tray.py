@@ -30,7 +30,9 @@ BOSS_R = 3.0
 INSERT_R, INSERT_DEPTH = 1.6, 4.0           # M2 heat-set insert
 MAGNET_R, MAGNET_DEPTH = 3.1, 1.6           # 6 x 1.5 mm disc magnet, for the 7 deg wedge
 FEET = [(-24, -14), (24, -14), (-24, 14), (24, 14)]   # 2.3 mm clear of the magnet pockets
-FOOT_R, FOOT_DEPTH = 4.0, 0.6               # rubber-foot recess
+FOOT_R = 4.2                                # silicone bumper 8 mm across, 3 mm high, glued in: 0.2 mm clearance
+TRAY_FOOT_DEPTH = 1.2                       # the floor is 2 mm thick, which leaves 0.8 mm above; the pad stands
+#                                             1.8 mm proud (the wedge's recess for it is sized from this)
 USB_PLUG = (13.0, 18.0, 26.0, -5.5, 1.5)    # width, y0, y1, z0, z1: plug and receptacle
 USB_WALL = (13.0, 22.0, 28.0, -2.5, 2.5)    # through the back wall of the frame
 FILLET_TOP, CHAMFER_BOTTOM = 1.0, 0.8
@@ -162,7 +164,7 @@ def run(context):
         extrude(comp, sk, FLOOR_Z, FLOOR_Z + MAGNET_DEPTH, cut)
         sk = sketch(comp, "Feet")
         circles(sk, FEET, FOOT_R)
-        extrude(comp, sk, FLOOR_Z, FLOOR_Z + FOOT_DEPTH, cut)
+        extrude(comp, sk, FLOOR_Z, FLOOR_Z + TRAY_FOOT_DEPTH, cut)
 
         # the board goes in last, as a reference, so no cut above can touch it; only into its own component
         if separate and os.path.isfile(BOARD_STEP):
