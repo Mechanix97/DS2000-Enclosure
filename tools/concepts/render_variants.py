@@ -21,9 +21,10 @@ VARIANTS = {
                   screw=hexc("#2a2a2c"), spec=0.35),
     "original": dict(tray=hexc("#ede9e1"), wedge=hexc("#4d4f54"), keys=[hexc("#eeeeea")] * 3,
                      screw=hexc("#b4b4b8"), spec=0.2),
-    # Super Nintendo: light grey shell, darker grey-violet base, Super Famicom button colours
-    "snes": dict(tray=hexc("#c9c9ce"), wedge=hexc("#5c5a6c"),
-                 keys=[hexc("#3b5bb5"), hexc("#2f9e51"), hexc("#d3312d")],
+    # North American Super Nintendo: light grey shell, dark grey base, lavender X/Y buttons for
+    # MUTE and DEAFEN and the deep purple of A/B for DISCONNECT
+    "snes": dict(tray=hexc("#c8c6cd"), wedge=hexc("#56545c"),
+                 keys=[hexc("#a9a3d3"), hexc("#a9a3d3"), hexc("#4f3f8f")],
                  screw=hexc("#9a9aa2"), spec=0.25),
 }
 
