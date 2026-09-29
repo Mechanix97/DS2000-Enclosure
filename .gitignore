@@ -10,3 +10,6 @@ Thumbs.db
 desktop.ini
 tools/concepts/out/
 tools/concepts/pcb_render*.step
+
+# VS Code settings that Fusion 360 writes next to each script
+.vscode/

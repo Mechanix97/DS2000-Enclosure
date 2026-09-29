@@ -1,0 +1,13 @@
+{
+    "autodeskProduct": "Fusion",
+    "type": "script",
+    "id": "a3c8e5f1-92d4-4b06-8e17-2f6d9b0c4a75",
+    "author": "DS2000",
+    "description": {
+        "": "DS2000 enclosure, 7 degree wedge for the concept B tray"
+    },
+    "version": "0.1.0",
+    "runOnStartup": false,
+    "supportedOS": "windows|mac",
+    "editEnabled": true
+}
