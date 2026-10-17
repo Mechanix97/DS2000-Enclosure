@@ -60,3 +60,7 @@ CAD and print files live in Git LFS (`.gitattributes`); run `git lfs install` on
 ## License
 
 AGPL-3.0, see [`LICENSE`](LICENSE), like the rest of the DS2000 project.
+
+The DS2000 name and the DS2000 and Mechardo Labs logos are not covered by the license: as an
+additional term under AGPL-3.0 section 7(e), their use is governed by the
+[trademark policy](TRADEMARKS.md). Forks are welcome under a name of their own.
