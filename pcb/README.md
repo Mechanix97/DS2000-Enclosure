@@ -1,8 +1,8 @@
 # DS2000-PCB rev A — mechanical reference
 
 `DS2000-PCB-revA.step` is the populated rev A board, exported from
-[DS2000-PCB](https://github.com/Mechanix97/DS2000-PCB) at commit `045842b` (DS2000-PCB#19, rev A with
-Kailh Choc V1 keys; re-export and update this line once it is merged) with:
+[DS2000-PCB](https://github.com/Mechanix97/DS2000-PCB) at commit `f9ae589` (DS2000-PCB#29, the
+production review; re-export and update this line if the board changes before it is merged) with:
 
 ```sh
 kicad-cli pcb export step --user-origin 100x94mm --subst-models -o DS2000-PCB-revA.step DS2000.kicad_pcb
@@ -62,16 +62,19 @@ Drill 2.2 mm, copper ring 4.4 mm on both faces: keep screw heads and standoffs w
 | Item | Where | Below the board (Z) |
 |---|---|---|
 | USB-C receptacle | X −4.47…+4.47, Y +16.9…+24.2 (face 1.2 mm past the back edge) | 0 … **−3.35** |
-| Choc switch pins and posts | under each key | 0 … −3.0 (centre post Ø3.4, side posts Ø1.9) |
-| SK6812MINI-E ×2 | under MUTE and DEAFEN (X −18 and 0, Y −11.7) | flush |
-| Debug pads (SWD, BOOT, RST) | X +18…+23.1, Y +13…+17 | flat pads |
-| USB wire holes (J3) | X −25.5…−17.9, Y +21 | through-holes |
+| Choc switch pins and posts | under each key | 0 … −3.0 (centre hole Ø4.0, side posts Ø1.9) |
+| MX switch pins (prototypes only) | two per key, at (+2.54, +5.08) and (−3.81, +2.54) from its centre | about 0 … −1.7 |
+| Debug pads (SWD: TP1–TP3; BOOT: JP1; RST: JP2) | X +17.3…+24.5, Y +12.3…+17.8 | flat pads |
+| Test pads TP4–TP6 (+5V, +3V3, +1V1) | X +4.9…+12.4, Y +5.3…+11.1 | flat pads |
+| USB wire pads (J3), SMD | X −16.9…−7.7, Y +19.1…+22.1 | flat pads, plus the soldered cable |
 
 - **Pocket depth**: at least **4 mm** under the whole board (USB-C plus margin), more if a weight or
   foam goes underneath
 - **Back wall**: a cut-out for the USB-C plug's overmould, centred on X = 0, Z ≈ −1.7 (the
   receptacle's centre); overmoulds are commonly up to 12.5 × 6.5 mm, so leave at least 13 × 7 mm
 - **Debug pads** are covered by the tray. Either the board comes off to reach them, or a small window
-  goes under X +16…+25, Y +11…+19
-- If J3 is used (soldered cable instead of the receptacle), the cable leaves from Y +21 near the back
-  left and needs its own exit
+  goes under X +16…+25, Y +11…+19. TP4–TP6 are production test pads, outside that window
+- If J3 is used (a soldered cable instead of the receptacle), its pads sit 1.2–10 mm left of the USB-C
+  cut-out (X ±6.5): the cable turns inside the pocket and leaves through the same cut-out
+- The key LEDs (SK6805-EC20) are on the **top** face, inside each switch's LED window (X −18 and 0,
+  Y −11.7); nothing of them is underneath
